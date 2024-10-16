@@ -6,8 +6,8 @@ Public Class Form1
 
         Dim mail As New MailMessage()
 
-        mail.From = New MailAddress("gallcockmail@googlemail.com")
-        mail.To.Add("gallcockmail@googlemail.com")
+        mail.From = New MailAddress("[Your gmail email here]")
+        mail.To.Add("[Your gmail email here]")
         mail.Subject = "Test"
         Dim htmlBody As String = "<h1 style='color:blue;'>Hello!</h1>" &
                                  "<p>This is a test email with <b>HTML formatting</b>.</p>" &
@@ -19,7 +19,7 @@ Public Class Form1
 
         Dim smtp As New SmtpClient("smtp.gmail.com")
         smtp.Port = 587
-        smtp.Credentials = New Net.NetworkCredential("gallcockmail@googlemail.com", "[App Password here]")
+        smtp.Credentials = New Net.NetworkCredential("[Your gmail email here]", "[App Password here]")
 
         smtp.EnableSsl = True
         Try
